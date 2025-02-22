@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aasray Clinic</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo-text">Aasray Clinic</div>
+                <div class="subtext d-none d-sm-block">Neuro Care & Brain</div>
+            </a>
+            <div class="d-flex order-lg-2">
+                <button class="btn btn-success btn-sm me-2 d-none d-md-block" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                <button class="btn btn-outline-primary btn-sm me-2 d-none d-md-block" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                <button class="btn btn-primary btn-sm d-none d-md-block" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- Alert Marquee -->
+  <div class="alert alert-danger m-0 py-2">
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        <strong>⚠️ IMPORTANT NOTICE:</strong> Our doctors are not available on Fridays and Saturdays. Please plan your appointments accordingly. For emergencies during these days, please visit the nearest emergency center.
+    </marquee>
+</div>
+
+  
+    <!-- Carousel Section -->
+    <div id="home">
+        <div id="brainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#brainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#brainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#brainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/Images/neuro1.jpg" class="d-block w-100 carousel-img" alt="Brain Scan" style="object-fit: cover; height: 60vh;">
+                    <div class="carousel-caption">
+                        <h3>Advanced Neuro Diagnostics</h3>
+                        <p>State-of-the-art brain imaging and diagnosis</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/Images/neuro2.jpg" class="d-block w-100 carousel-img" alt="Neurology Team">
+                    <div class="carousel-caption">
+                        <h3>Expert Medical Team</h3>
+                        <p>Experienced neurologists and healthcare professionals</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/Images/neuro3.jpg" class="d-block w-100 carousel-img" alt="Treatment">
+                    <div class="carousel-caption">
+                        <h3>Comprehensive Care</h3>
+                        <p>Advanced treatment solutions for neurological conditions</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#brainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#brainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book an Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="mb-3">
+                            <label for="patientName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="patientName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="patientEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="patientPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentDate" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="appointmentDate" required>
+                            <small class="text-muted">Note: Clinic is closed on Fridays and Saturdays</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentTime" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="appointmentTime" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentType" class="form-label">Appointment Type</label>
+                            <select class="form-select" id="appointmentType" required>
+                                <option value="">Select type</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="followup">Follow-up Visit</option>
+                                <option value="emergency">Emergency</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Our Seriveces  -->
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="/mages/Aasray.png" class="img-fluid rounded shadow" alt="Aasray Clinic Team">
+                        <div class="experience-badge">
+                            <span class="h2 fw-bold">15+</span>
+                            <p class="mb-0">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content ps-lg-4">
+                        <h6 class="text-primary">About Us</h6>
+                        <h2 class="fw-bold mb-4">Leading Neurology Care Center in the Region</h2>
+                        <p class="lead mb-4">Aasray Clinic has been at the forefront of neurological care since 2008, providing exceptional medical services with a patient-first approach.</p>
+                        
+                        <div class="key-points mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-brain text-primary fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Expert Neurologists</h5>
+                                    <p class="mb-0">Team of highly qualified and experienced specialists</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-microscope text-primary fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Advanced Technology</h5>
+                                    <p class="mb-0">State-of-the-art diagnostic and treatment equipment</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user-md text-primary fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Personalized Care</h5>
+                                    <p class="mb-0">Tailored treatment plans for each patient</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats row g-4 text-center">
+                            <div class="col-4">
+                                <h3 class="fw-bold text-primary">5000+</h3>
+                                <p class="mb-0">Patients Treated</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold text-primary">10+</h3>
+                                <p class="mb-0">Specialists</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold text-primary">98%</h3>
+                                <p class="mb-0">Success Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Services -->
+    <section id="services" class="services py-5 bg-navy text-white">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Our Services</h2>
+                <p class="text-white-50">Comprehensive Neurological Care Solutions</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Service Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card shadow-sm hover-effect">
+                            <img src="/Images/Card1.jpg" class="card-img-top" alt="Neurological Consultation" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="card-title">Neurological Consultation</h4>
+                                <p class="card-text">Expert diagnosis and treatment planning for various neurological conditions including headaches, seizures, and movement disorders.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success"></i> Comprehensive Evaluation</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Personalized Treatment Plans</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Follow-up Care</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card shadow-sm hover-effect">
+                            <img src="/Images/Card2.jpg" class="card-img-top" alt="Brain Mapping">
+                            <div class="card-body">
+                                <h4 class="card-title">Advanced Brain Mapping</h4>
+                                <p class="card-text">State-of-the-art brain mapping and imaging services using cutting-edge technology for precise diagnosis.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success"></i> MRI & CT Scanning</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> EEG Monitoring</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Detailed Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card shadow-sm hover-effect">
+                            <img src="/Images/Card3.jpg" class="card-img-top" alt="Neuro Rehabilitation">
+                            <div class="card-body">
+                                <h4 class="card-title">Neuro Rehabilitation</h4>
+                                <p class="card-text">Comprehensive rehabilitation programs for stroke recovery, injury, and other neurological conditions Lorem ipsum dolor sit amet..</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success"></i> Physical Therapy</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Cognitive Training</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Speech Therapy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section py-5" style="background-color: #284b63;">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold text-dark">Our Expert Team</h2>
+                <p class="text-dark">Meet our highly qualified neurologists</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center mb-4">
+                        <img src="/Images/doctor1.jpg" class="img-fluid rounded-circle mb-3" alt="Doctor" style="max-width: 200px;">
+                        <h4 class="text-dark">Dr. Rajesh Kumar</h4>
+                        <p class="text-dark">Senior Neurologist</p>
+                        <p class="text-dark small">MBBS, MD (Neurology), DM (Neurology)</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center mb-4">
+                        <img src="/Images/doctor2.jpg" class="img-fluid rounded-circle mb-3" alt="Doctor" style="max-width: 200px;">
+                        <h4 class="text-dark">Dr. Priya Sharma</h4>
+                        <p class="text-dark">Neuro Surgeon</p>
+                        <p class="text-dark small">MBBS, MS (Surgery), MCh (Neurosurgery)</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center mb-4">
+                        <img src="/Images/doctor3.jpg" class="img-fluid rounded-circle mb-3" alt="Doctor" style="max-width: 200px;">
+                        <h4 class="text-dark">Dr. Amit Patel</h4>
+                        <p class="text-dark">Neurophysiologist</p>
+                        <p class="text-dark small">MBBS, MD (Physiology), PhD (Neurophysiology)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Education section -->
+    <section id="education" class="education-section py-5" style="background-color: #e9ecef;">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold text-dark">Doctor's Education</h2>
+                <p class="text-dark">Academic Excellence and Qualifications</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="education-card p-4 shadow-sm rounded">
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-graduation-cap text-primary fa-3x me-3"></i>
+                            <div>
+                                <h3 class="mb-1 text-dark">Dr. VK Katiyar</h3>
+                                <p class="text-dark mb-0">Senior Consultant Neurologist</p>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 text-dark">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>MBBS</strong> - Bachelor of Medicine, Bachelor of Surgery
+                                </li>
+                                <li class="mb-3 text-dark">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>MD</strong> - Doctor of Medicine
+                                </li>
+                                <li class="mb-3 text-dark">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>DNB Neurology</strong> - Diplomate of National Board in Neurology
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact page -->
+    <section id="contact" class="contact-section py-5" style="background-color: #d1e1f0;">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Contact Us</h2>
+                <p class="text-muted">Get in touch with us for appointments and inquiries</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-info p-4 shadow-sm rounded">
+                        <div class="mb-4">
+                            <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>Location</h4>
+                            <p class="mb-0">23, Hashimpur Road</p>
+                            <p class="mb-0">Opposite Kamla Nehru Hospital</p>
+                            <p class="mb-0">Tagore Town, Prayagraj</p>
+                            <p class="mb-0">Allahabad, Uttar Pradesh - 211002</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4><i class="fas fa-phone-alt text-primary me-2"></i>Contact Numbers</h4>
+                            <p class="mb-0">Reception: +91 98765 43210</p>
+                            <p class="mb-0">Emergency: +91 98765 43211</p>
+                            <p class="mb-0">WhatsApp: +91 98765 43212</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4><i class="fas fa-clock text-primary me-2"></i>Working Hours</h4>
+                            <p class="mb-0">Monday - Thursday: 9:00 AM - 8:00 PM</p>
+                            <p class="mb-0">Sunday: 10:00 AM - 4:00 PM</p>
+                            <p class="mb-0 text-danger">Friday - Saturday: Closed</p>
+                        </div>
+
+                        <div>
+                            <h4><i class="fas fa-envelope text-primary me-2"></i>Email</h4>
+                            <p class="mb-0">info@aasrayclinic.com</p>
+                            <p class="mb-0">appointments@aasrayclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form p-4 shadow-sm rounded">
+                        <h4 class="mb-4">Send us a Message</h4>
+                        <form id="contactForm" onsubmit="submitContactForm(event)">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="contactName" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contactEmail" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="contactPhone" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="contactSubject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="4" id="contactMessage" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Google Map -->
+                    <div class="mt-4 shadow-sm rounded">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.3338893479947!2d81.84966091501612!3d25.45496998377621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acad40b1e9867%3A0x9f1c0073b434df4c!2sKamla%20Nehru%20Memorial%20Hospital!5e0!3m2!1sen!2sin!4v1645510615000!5m2!1sen!2sin"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer section -->
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- footer section -->
+    <footer class="py-5" style="background-color: #284b63;">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Clinic Info -->
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="footer-info text-white">
+                        <h3 class="text-white mb-4">Aasray Clinic</h3>
+                        <p class="mb-1"><i class="fas fa-hospital me-2"></i> Neuro Care & Brain</p>
+                        <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> 23, Hashimpur Road, Prayagraj</p>
+                        <p class="mb-1"><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-envelope me-2"></i> info@aasrayclinic.com</p>
+                        <div class="social-links">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>About Us</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Services</a></li>
+                        <li class="mb-2"><a href="#team" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Our Team</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-12 col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <p class="text-white mb-4">Subscribe to our newsletter for updates and health tips.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-white mt-5 pt-4 border-top">
+                <p class="mb-0">&copy; 2024 Aasray Clinic. All rights reserved. Designed& Developed By MOHIT TRIPATHI</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

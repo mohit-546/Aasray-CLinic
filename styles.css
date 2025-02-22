@@ -1,0 +1,282 @@
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.subtext {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Navbar Styles */
+.navbar-nav {
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.carousel {
+    margin-bottom: 30px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.carousel-img {
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+.service-card .card {
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.service-card .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.service-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card .card-body {
+  padding: 1.5rem;
+}
+
+.service-card .card-title {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.service-card ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.service-card .fas {
+  margin-right: 8px;
+}
+
+.section-title h2 {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #007bff;
+}
+.bg-navy {
+  background-color: #023047 !important;
+}
+
+.services .section-title h2 {
+  color: white;
+}
+
+.about-section .about-image {
+    position: relative;
+}
+
+.about-section .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #f8f9fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .stats {
+        margin-top: 20px;
+    }
+    
+    .contact-info {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo-text {
+        font-size: 1rem;
+    }
+    
+    .carousel-caption {
+        display: none;
+    }
+    
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .team-card {
+        margin-bottom: 30px;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+/* General responsive improvements */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Improve touch targets on mobile */
+.nav-link, 
+.btn,
+.form-control {
+    padding: 0.5rem 1rem;
+}
+
+/* Better modal display on mobile */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+/* Improve form elements on mobile */
+input, 
+select, 
+textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+}
+
+/* Fix map responsiveness */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
